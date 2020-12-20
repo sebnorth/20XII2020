@@ -15,19 +15,46 @@ namespace Zadanie12
 
             for (int i = n - 1; i >= 0; i--) // i - ilość spacji w kolejnych wierszach
             {
-                // wydruk spacji
-                for (int j = 0; j < i; j++)
+
+                if (i == n - 1 || i == n - 2 || i == 0)
                 {
-                    Console.Write(" ");
+
+
+
+                    // wydruk spacji
+                    for (int j = 0; j < i; j++)
+                    {
+                        Console.Write(" ");
+                    }
+
+                    // wydruk krzyżyków
+                    for (int k = 0; k < n - i; k++)
+                    {
+                        Console.Write("X");
+                    }
+                    // przejście do nowej linii
+                    Console.WriteLine();
                 }
 
-                // wydruk krzyżyków
-                for (int k = 0; k < n - i; k++)
-                {
+                else {
+
+                    // wydruk spacji
+                    for (int j = 0; j < i; j++)
+                    {
+                        Console.Write(" ");
+                    }
+
                     Console.Write("X");
+                    // wydruk spacji
+                    for (int k = 0; k < n - i - 2; k++)
+                    {
+                        Console.Write(" ");
+                    }
+                    Console.Write("X");
+
+                    // przejście do nowej linii
+                    Console.WriteLine();
                 }
-                // przejście do nowej linii
-                Console.WriteLine();
             }
 
             Console.ReadKey();

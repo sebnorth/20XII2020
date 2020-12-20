@@ -38,7 +38,7 @@ namespace Zadanie6
 
             for (int i = 0; i < 20; i++)
             {
-                Console.WriteLine(gwiazdki);
+                Console.WriteLine($"{gwiazdki}");
             }
 
             stoper.Stop();
